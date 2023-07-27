@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#FAE83C">
+    <meta name="msapplication-navbutton-color" content="#FAE83C">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAE83C">
+    
+    <title>Вопрос-ответы</title>
+    <meta content='' name='keywords'>
+    <meta content='' name='description'>		
+
+	<script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>    
+    
+	<!--jQueryUI-->
+    <link href="assets/plugins/jQueryUI/jquery-ui.min.css" rel="stylesheet">
+    <!--Loader-->
+    <link href="assets/plugins/loader/loader.css" rel="stylesheet">
+    <!--fancybox-->
+    <link href="assets/plugins/fancybox-master/jquery.fancybox.min.css" rel="stylesheet">
+    
+    <link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+    <link type="text/css" href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datatables/datatables.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    
+    <!--init.js-->
+    <link href="assets/css/my_style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+  	    <header class="header pos-r z-1">
+      <div class="container header-container">
+        <div class="row jc-sb ai-c header-row gx-10">
+          <div class="col header-menu collapse">
+            <div class="row gx-10 jc-sb pt-sm-100 pt-75 pt-xl-0">
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="/">Главная</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="rules">Правила</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="winners">Победители</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="upload/products.pdf" target="_blank">Продукция</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15">
+                <div class="pr-xl-15"><a class="header-menu__link link-brown" href="faq">FAQ</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-xl-n">
+            <button class="hamburger collapsed js-hamburger" type="button" data-toggle="collapse" data-target=".header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+          </div>
+          <div class="col-auto">
+            <div class="row ai-c gx-10">
+              <div class="col-auto"><a class="logo-ryaba" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-ryaba__img" src="img/logo_ryaba.svg" alt="Ряба крымская" width="62"></a></div>
+              <div class="col-auto"><a class="logo-friends" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-friends__img" src="img/logo_friends.svg" alt="Дружба народов" width="82"></a></div>
+              <div class="col-auto"><a class="logo-madina" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-madina__img" src="img/logo_madina.svg" alt="El Madina" width="108"></a></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row ai-c jc-fe">
+              <div class="col d-xl-b d-n">
+                <div class="row ai-c jc-c">
+                  <div class="col-auto"><a class="header-link" href="https://vk.com/druzhbanarodov_ru" target="_blank"><img class="header-link__icon" src="img/icons/vk.svg"/></a></div>
+                  <div class="col-auto"><a class="header-link" href="#" target="_blank"><img class="header-link__icon header-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                  <div class="col-auto"><a class="header-link" href="https://www.instagram.com/druzhbanarodov_ru/" target="_blank"><img class="header-link__icon" src="img/icons/instagram.svg"/></a></div>
+                </div>
+              </div>
+              <div class="col-auto">
+                
+                                
+                <button class="btn btn-white lh-100 px-lg-32 px-sm-15 px-10" data-toggle="modal" data-target="#modal-enter"><img class="btn__icon mr-lg-10" src="img/icons/user.svg"/><span class="va-m d-lg-ib d-n">Личный кабинет</span></button>
+                                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+	    <div class="wrapper pt-md-38 pt-sm-30 pt-25">
+      <div class="container px-xl-0">
+        <div class="ff-2 ta-c c-red fz-lg-74 fz-md-64 fz-sm-50 fz-37 fw-700 c-red mb-15">Вопросы и ответы</div>
+        <div class="page bgc-white">
+          
+          
+          
+          <div class="page-inner pt-45 px-xl-75 px-lg-35 px-15 pb-lg-40 pb-25">
+            <div class="ta-c fw-300 fz-lg-22 fz-md-20 fz-18 mx-a lh-125 pt-xl-25 pt-lg-20 pt-10 mb-lg-45 mb-md-30 mb-25" style="max-width: 714px">Уважаемые участники, прочтите список часто задаваемых вопросов или задайте свой вопрос в форме обратной связи ниже.</div>
+            <div class="faq-wrapper">
+              
+                      	                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question " href="#faq-0" data-toggle="collapse">Кто является Организатором Акции?</a>
+                <div class="collapse answer-collapse show" id="faq-0" data-parent=".faq-wrapper">
+                  <div class="answer">Организатором акции является АО «Оригинал». Выступая Организатором акции, АО «Оригинал» действует в интересах Заказчика - ООО «Мясокомбинат «Дружба Народов».</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-1" data-toggle="collapse">Какова территория проведения Акции?</a>
+                <div class="collapse answer-collapse " id="faq-1" data-parent=".faq-wrapper">
+                  <div class="answer">Территория проведения Акции - Российская Федерация.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-2" data-toggle="collapse">Какие сроки проведения Акции?</a>
+                <div class="collapse answer-collapse " id="faq-2" data-parent=".faq-wrapper">
+                  <div class="answer">Общий срок проведения акции - с «07» октября 2020 года до «31» января 2021 года.
+Срок регистрации чеков - с «07» октября до «21» декабря 2020 года (включительно). К регистрации принимаются чеки, датированные с «07» октября до «21» декабря 2020 г. 
+Период выдачи призов с «21» октября 2020 года до «31» января 2021 года.
+</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-3" data-toggle="collapse">Кто может принять участие в Акции?</a>
+                <div class="collapse answer-collapse " id="faq-3" data-parent=".faq-wrapper">
+                  <div class="answer">Участниками Акции могут являться дееспособные физические лица, достигшие возраста 18 лет. Участие в Акции несовершеннолетних граждан осуществляется исключительно с письменного согласия их законных представителей, которое в обязательном порядке предоставляется Организатору Акции вместе с документами. Граждане Российской Федерации, постоянно зарегистрированные на территории Российской Федерации.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-4" data-toggle="collapse">Где можно купить акционную продукцию торговых марок «Дружба народов», «Ряба Крымская» и «Al Madina»? Какая продукция участвует в Акции?</a>
+                <div class="collapse answer-collapse " id="faq-4" data-parent=".faq-wrapper">
+                  <div class="answer">В Акции принимает участие продукция под торговыми марками «Дружба народов», «Ряба Крымская» и «Al Madina» и реализуемая в сетевых и розничных магазинах на территории РФ. Полный список акционной продукции <a href="https://druzhba-promo.ru/upload/products.pdf" target="_blank">здесь.</a> </div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-5" data-toggle="collapse">Что нужно сделать, чтобы принять участие в Акции?</a>
+                <div class="collapse answer-collapse " id="faq-5" data-parent=".faq-wrapper">
+                  <div class="answer">Чтобы принять участие в акции необходимо:
+<ol>
+<li>Приобрести акционную продукцию и сохранить кассовый чек;</li>
+<li>Осуществить регистрацию на сайте https://www.druzhba-promo.ru/;</li>
+<li>Заполнить регистрационную форму с указанием следующих данных:</li>
+</ol>
+<ul>
+<li>Фамилия, Имя, Отчество;
+<li>Пол;
+<li>Город проживания;
+<li>Адрес электронной почты (e-mail);
+<li>Номер мобильного телефона.
+</ul>
+
+После отправки формы регистрации данные для входа в личный кабинет отправляются в виде sms-сообщения от отправителя D_Narodov на номер телефона участника, указанный в форме регистрации.
+<p>
+<p>
+4. Загрузить изображение чека с приобретенной продукцией торговых марок  «Дружба народов», «Ряба Крымская» и «Al Madina» и ввести фискальные номера чека (полная информация представлена в вопросе №9). Чек необходимо сохранить до окончания акции.  
+</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-6" data-toggle="collapse">Как зарегистрироваться на промо-сайте?</a>
+                <div class="collapse answer-collapse " id="faq-6" data-parent=".faq-wrapper">
+                  <div class="answer">Необходимо заполнить регистрационную форму по ссылке на главной странице сайта и получить пароль к Личному кабинету. Данные, указанные в регистрационной форме, должны быть достоверными и корректно заполненными.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-7" data-toggle="collapse">Как зарегистрировать чек?</a>
+                <div class="collapse answer-collapse " id="faq-7" data-parent=".faq-wrapper">
+                  <div class="answer">Чек можно зарегистрировать только в Личном кабинете промо-сайта https://www.druzhba-promo.ru/ Для этого необходимо в специальное поле, загрузить фотографию чека, увеличить изображение QR кода и распознать фискальные признаки. Если требуемые данные не будут считаны автоматически, то нужно внести их в специальные поля на странице регистрации чека.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-8" data-toggle="collapse">Где я могу найти номера ФД, ФН, ФПД на чеке, если данные не будут считаны?</a>
+                <div class="collapse answer-collapse " id="faq-8" data-parent=".faq-wrapper">
+                  <div class="answer">ФН - это фискальный накопитель, содержит 16 знаков;
+ФД - номер фискального документа, содержит до 10 знаков;
+ФПД - фискальный признак документа, содержит до 10 знаков.
+Эти номера должны присутствовать на чеке, по ним происходит проверка чека на подлинность.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-9" data-toggle="collapse">Нужно ли сохранять чеки?</a>
+                <div class="collapse answer-collapse " id="faq-9" data-parent=".faq-wrapper">
+                  <div class="answer">Чек необходимо сохранить до окончания акции. Организатор может запросить оригиналы чеков у претендентов на получение призов.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-10" data-toggle="collapse">Отклонили чек, почему?</a>
+                <div class="collapse answer-collapse " id="faq-10" data-parent=".faq-wrapper">
+                  <div class="answer">К регистрации принимаются чеки по следующим критериям:
+<ui>
+<li>фото - качественное, чек сфотографирован полностью;</li>
+<li>данные, указанные на чеке: дата покупки, время покупки, итого по сумме чека, №ФН, №ФД, №ФПД введены правильно;</li>
+<li>кассовый чек должен быть выбит кассиром в период c 07.10.20г. по 21.12.20г.</li>
+<li>все символы четко видно;</li>
+<li>на кассовом чеке есть читаемый QR-код;</li>
+<li>в чеке отображается наименование Акционной продукции;</li>
+<li>чек соответствует форме ФЗ-54;</li>
+<li>фото - качественное, без заломов и обрывов, формата JPG.</li>
+</ul>
+Если ваш чек не прошел модерацию, то причину отклонения вы увидите в личном кабинете.
+
+Участник Акции не вправе требовать от Организатора Акции ускорения процесса проверки чека или подтверждения чека, по которому ФНС не предоставила ответ.
+</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-11" data-toggle="collapse">Можно ли зарегистрироваться под несколькими номерами телефонов?</a>
+                <div class="collapse answer-collapse " id="faq-11" data-parent=".faq-wrapper">
+                  <div class="answer">Участник имеет право зарегистрироваться на промо-сайте только один раз за всё время проведения Акции. Не допускается регистрация Участников с дублированием информации в различных личных кабинетах и/или любое иное искажение (фальсификация) информации.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-12" data-toggle="collapse">Можно ли поменять номер телефона, если я неправильно его указал?</a>
+                <div class="collapse answer-collapse " id="faq-12" data-parent=".faq-wrapper">
+                  <div class="answer">Вы можете направить запрос на изменение номера телефона в форму обратной связи. Организатор рассмотрит обращение в индивидуальном порядке</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-13" data-toggle="collapse">Какие призы разыгрываются в Акции?</a>
+                <div class="collapse answer-collapse " id="faq-13" data-parent=".faq-wrapper">
+                  <div class="answer">Регулярный приз:
+Портативный аккумулятор,
+Беспроводные наушники,
+Фитнес браслет,
+Мультипекарь,
+Сертификат в Spa отель «Ялта Интурист»,
+Абонемент на массовые катания в Ледовый дворец «Консоль-Спорт» 
+Ежемесячный приз:
+Iphone 11
+Главный приз:
+Сертификат на туристическую путевку (Москва),
+Сертификат на туристическую путевку (Санкт-Петербург),
+Сертификат на туристическую путевку (Казань).</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-14" data-toggle="collapse">Когда я смогу получить главный приз?</a>
+                <div class="collapse answer-collapse " id="faq-14" data-parent=".faq-wrapper">
+                  <div class="answer">Главный приз передается в течении 10-ти рабочих дней с момента предоставления победителем данных для получения приза.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-15" data-toggle="collapse">Сколько призов можно выиграть за все время акции?</a>
+                <div class="collapse answer-collapse " id="faq-15" data-parent=".faq-wrapper">
+                  <div class="answer">Согласно правилам п. 3.18., за весь период Акции участник может получить по одному призу каждой категории.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-16" data-toggle="collapse">Какие данные мне необходимо предоставить для получения призов?</a>
+                <div class="collapse answer-collapse " id="faq-16" data-parent=".faq-wrapper">
+                  <div class="answer">Победителям необходимо предоставить по запросу Организатора акции следующие данные:
+• Действующий адрес электронной почты
+• Фотографию чека, который стал выигрышным (это должна быть качественная фотография целого чека с четкими символами и фискальными номерами, обязательно в чеке должна отображаться акционная продукция).
+• Иную информацию по запросу Организатора Акции или Оператора Победителю главного приза придёт запрос на электронную почту с перечнем всех данных, которые необходимо предоставить согласно Правилам Акции.
+</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-17" data-toggle="collapse">Как я могу выиграть Главный приз?</a>
+                <div class="collapse answer-collapse " id="faq-17" data-parent=".faq-wrapper">
+                  <div class="answer">Главный приз определяется среди всех участников, зарегистрировавших чеки с акционной продукцией на сумму не менее 500 рублей в одном чеке, за весь период акции. В розыгрыше Главного приза не принимают участие заявки, выигравшие Регулярный и/или Ежемесячный приз.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-18" data-toggle="collapse">Нужно ли будет оплачивать налоги с призов?</a>
+                <div class="collapse answer-collapse " id="faq-18" data-parent=".faq-wrapper">
+                  <div class="answer">Призерам Акции не потребуется заполнять налоговые декларации или платить налог, все обязательства и расходы берет на себя Заказчик акции</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-19" data-toggle="collapse">Зачем вводить свои личные данные?</a>
+                <div class="collapse answer-collapse " id="faq-19" data-parent=".faq-wrapper">
+                  <div class="answer">Персональные данные нужны для отправки призов, общения с участниками в рамках Акции, исполнения Заказчиком функций налогового агента.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-20" data-toggle="collapse">А не разгласите ли Вы мои данные?</a>
+                <div class="collapse answer-collapse " id="faq-20" data-parent=".faq-wrapper">
+                  <div class="answer">Организатор Акции не вправе предоставлять информацию об Участнике Акции третьим лицам, за исключением случаев, предусмотренных законодательством Российской Федерации</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-21" data-toggle="collapse">Как отозвать свои данные?</a>
+                <div class="collapse answer-collapse " id="faq-21" data-parent=".faq-wrapper">
+                  <div class="answer">Отозвать свои данные Вы можете путем направления письменного заявления Почтой России ценным письмом с описью вложения по почтовому адресу Организатора, что влечет автоматическое прекращение участия в Акции лица, отозвавшего свои персональные данные.</div>
+                </div>
+              </div>
+              			                      
+              <div class="faq px-xl-25 mb-md-22 mb-15"><a class="question collapsed" href="#faq-22" data-toggle="collapse">Как связаться с Организатором?</a>
+                <div class="collapse answer-collapse " id="faq-22" data-parent=".faq-wrapper">
+                  <div class="answer">С Организатором Вы можете связаться, заполнив форму Обратной связи на сайте Акции, или отравив электронное письмо на help@druzhba-promo.ru  Организатор предоставит ответ в течение 3 (трех) рабочих дней.</div>
+                </div>
+              </div>
+              			            </div>
+          </div>
+          
+          <div class="pt-xl-68 pt-lg-45 pt-md-40 pt-35 px-xl-100 px-lg-35 px-15 pb-xl-100 pb-lg-80 pb-md-60 pb-45">
+            <div class="fz-xl-50 fz-lg-40 fz-md-35 fz-sm-30 fz-26 fw-700 ff-2 tt-u mb-sm-25 mb-20">Задайте свой вопрос</div>
+            
+            
+<form id="formFeedback" method="post" action="/api/feedback/save" class="ajax validate">                      
+            <div style="max-width:746px">
+              <div class="row gx-16">
+                <div class="col-md-6 mb-16">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="name" value=""> 
+                    <label class="form-label">Имя</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-16">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="email" value="">
+                    <label class="form-label">Email</label>
+                    <div class="invalid-feedback">Почтовый адрес введен неверно</div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-16">
+                <div class="form-group pos-r">
+                  <textarea class="form-control js-input form-control_text validate" name="quest"></textarea>
+                  <label class="form-label">Coобщение</label>
+                </div>
+              </div>
+              <div class="mb-xl-50 mb-lg-40 mb-md-30 mb-25">
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox" name="confirm1">
+                  <div class="checkbox__text">Предоставляя свои персональные данные, я даю <a href="#" class="link-red">согласие на хранение и обработку моих персональных данных</a></div>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-bg-red ff-2 fw-700 px-md-70 fz-sm-28 fz-24 tt-u py-md-20">Отправить</button>
+            </div>
+</form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  	    <footer>
+      <div class="footer py-xl-83 py-sm-60 py-40">
+        <div class="container footer-container">
+          <div class="row ai-c mb-6">
+            <div class="col-md-auto mb-15 ta-c lh-100 order-md-1"><a class="link-brown-red ff-2 fz-md-44 fz-40" href="tel:88005056568">8 800 505 65 68</a></div>
+            <div class="col-md mb-15 order-md-0">
+              <div class="row gx-10 jc-c">
+                <div class="col-auto"><a class="footer-link" href="https://vk.com/druzhbanarodov_ru" target="_blank"><img class="footer-link__icon footer-link__icon_vk" src="img/icons/vk.svg"/></a></div>
+                <div class="col-auto"><a class="footer-link" href="#"><img class="footer-link__icon footer-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                <div class="col-auto"><a class="footer-link" href="https://www.instagram.com/druzhbanarodov_ru/" target="_blank"><img class="footer-link__icon footer-link__icon_inst" src="img/icons/instagram.svg"/></a></div>
+              </div>
+            </div>
+            <div class="col-md ta-c mb-15 order-md-2"><a class="ff-2 fz-20 link-brown-red" href="upload/rules.pdf" target="_blank">Правила акции</a></div>
+          </div>
+          <div class="footer-text c-brown-light ta-c pt-md-30 fz-sm-14 fz-13">Сроки проведения акции: с&nbsp;07&nbsp;октября&nbsp;2020&nbsp;года по&nbsp;31&nbsp;января&nbsp;2021&nbsp;года. Период регистрации чеков: с&nbsp;07&nbsp;октября&nbsp;2020&nbsp;года по&nbsp;21&nbsp;декабря&nbsp;2020&nbsp;года. Розыгрыш Главного приза 25&nbsp;декабря&nbsp;2020&nbsp;года. Срок вручения Главного приза до&nbsp;31&nbsp;января&nbsp;2021&nbsp;года. Полные правила проведения акции, информацию об организаторе акции, о количестве призов, сроках, месте и порядке их получения можно узнать на сайте <a href="https://www.druzhba-promo.ru/" target="_blank" class="link-brown">DRUZHBA-PROMO</a>.RU. Количество призов ограничено, их внешний вид может отличаться от изображенного на рекламных материалах. Организатор акции - АО&nbsp;«Оригинал».</div>
+        </div>
+      </div>
+    </footer>
+
+      
+        <script src="//ulogin.ru/js/ulogin.js"></script>			
+    <script src="/assets/js/social.js"></script>		
+        <div class="modal" id="modal-reg">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-medium">
+        <div class="modal-content">
+          <div class="modal-body px-sm-70 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            
+            
+<form id="formReg" action="/api/user/registration" class="ajax validate" method="post">
+	<input type="hidden" name="token" value="" />
+    <input type="hidden" name="country" value="1" />
+    <input type="hidden" name="region" />
+    <input type="hidden" name="area" />
+    <input type="hidden" name="settlement" />
+    <input type="hidden" name="addr" />                  
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="modal-title fz-sm-50 fz-36 fz- ff-2 fw-700 mb-10 tt-u lh-120 ta-c ta-md-l">Регистрация</div>
+              </div>              
+              <div class="col-md-6">
+                <div class="modal-body-panel bgc-yellow pl-15 mb-20">
+                  <div class="row ai-c gx-0" id="uLogin" data-ulogin="display=buttons;fields=first_name,last_name;optional=sex,email;providers=facebook,instagram,vkontakte;hidden=;redirect_uri=;callback=ulogin_func;">
+                    <div class="col">
+                      <div class="fz-sm-16 fz-14">Через соцсети:</div>
+                    </div>
+                    <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="vkontakte"><img class="modal-link__icon" src="img/icons/vk.svg"/></a></div>
+                    <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="facebook"><img class="modal-link__icon modal-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                    <div class="col-auto"><a class="modal-link" href="#" data-uloginbutton="instagram"><img class="modal-link__icon" src="img/icons/instagram.svg"/></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="fam">
+                    <label class="form-label">Фамилия</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="im">
+                    <label class="form-label">Имя</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+                <div class="mb-20">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="ot">
+                    <label class="form-label">Отчество</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-22">
+                  <div class="row sex-row ai-c jc-c">
+                    <div class="col-auto">
+                      <div class="c-gray fz-18">Пол:</div>
+                    </div>
+                    <div class="col-auto">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="radio" name="sex" value="t">
+                        <div class="checkbox__text">Муж.</div>
+                      </label>
+                    </div>
+                    <div class="col-auto">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="radio" name="sex" value="f">
+                        <div class="checkbox__text">Жен.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control mask-phone js-input validate" type="tel" name="phone">
+                    <label class="form-label">Номер телефона</label>
+                    <div class="invalid-feedback">Номер телефона введен неверно</div>
+                  </div>
+                </div>
+                <div class="mb-20">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="email">
+                    <label class="form-label">E-mail</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-17">
+              <div class="form-group pos-r">
+                <input class="form-control js-input" type="text" name="city">
+                <label class="form-label">Город</label>
+                <div class="invalid-feedback">Обязательно к заполнению</div>
+              </div>
+            </div>
+            <div class="mb-7">
+              <label class="checkbox">
+                <input class="checkbox__input" type="radio" name="confirm1" >
+                <div class="checkbox__text">Согласие с <a href="upload/rules.pdf" class="link-red" target="_blank">Правилами Акции</a></div>
+              </label>
+            </div>
+            <div class="mb-27">
+              <label class="checkbox">
+                <input class="checkbox__input" type="radio" name="confirm2" >
+                <div class="checkbox__text">Подтверждение о достижении 18-летнего возраста;</div>
+              </label>
+            </div>
+            <div class="ta-c">
+              <button type="submit" class="btn btn-bg-red fw-700 fz-sm-28 fz-24 ff-2 tt-u py-sm-18 py-15 px-sm-90">Зарегистрироваться</button>
+            </div>
+            
+</form>            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="modal" id="modal-enter">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="modal-title ta-c fz-sm-50 fz-36 fz- ff-2 fw-700 mb-10 tt-u lh-120">Авторизация</div>
+            
+<form method="post" action="/api/user/auth" id="formAuth" class="ajax validate">                            
+  
+            <div class="modal-body-panel bgc-yellow pl-xl-25 pl-15 mb-20">
+              <div class="row ai-c gx-0" id="uLogin2" data-ulogin="display=buttons;fields=first_name,last_name;optional=sex,email;providers=facebook,instagram,vkontakte;hidden=;redirect_uri=;callback=ulogin_func;">
+                <div class="col">
+                  <div class="fz-sm-16 fz-14">Через соцсети:</div>
+                </div>                
+                <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="vkontakte"><img class="modal-link__icon" src="img/icons/vk.svg"/></a></div>
+                <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="facebook"><img class="modal-link__icon modal-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                <div class="col-auto"><a class="modal-link" href="#" data-uloginbutton="instagram"><img class="modal-link__icon" src="img/icons/instagram.svg"/></a></div>
+                
+              </div>
+            </div>
+            <div class="mb-15">
+              <div class="form-group pos-r">
+                <input class="form-control mask-phone js-input validate" type="tel" name="login">
+                <label class="form-label">Номер телефона</label>
+                <div class="invalid-feedback">Номер телефона введен неверно</div>
+              </div>
+            </div>
+            <div class="mb-sm-30 mb-25">
+              <div class="form-group pos-r">
+                <input class="form-control js-input validate" type="password" name="passwd">
+                <label class="form-label">Пароль</label><a class="js-modal form-group-link link-brown" href="#modal-recovery">Забыли пароль?</a>
+                <div class="invalid-feedback">Пароль введен неверно</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-bg-red w-100p fw-700 fz-sm-28 fz-24 ff-2 tt-u py-sm-18 py-15">Авторизоваться</button>
+</form>
+            
+            <div class="ta-c pt-25"><a class="link-black js-modal fz-sm-20 fz-18" href="#modal-reg">Зарегистрироваться</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="modal" id="modal-recovery">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-small">
+        <div class="modal-content">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="ta-c ff-2 fw-700 fz-sm-32 fz-26 mb-15">Восстановление пароля</div>
+            
+<form id="formRestore" class="ajax validate" method="post" action="/api/user/restorePassword">                           
+            <div class="mb-sm-30 mb-25">
+              <div class="form-group pos-r">
+                <input class="form-control mask-phone js-input validate" type="text" name="login">
+                <label class="form-label">Телефон</label>
+                <div class="invalid-feedback">Телефон введен неверно</div>
+              </div>
+            </div>
+            <button type="submit" class="w-100p btn btn-bg-red fw-700 ff-2 fz-28 tt-u px-60 py-sm-18">Восстановить</button>
+</form>
+            <div class="mt-sm-20 mt-15 fz-14 c-gray lh-120">Пароль будет выслан по СМС на телефон, указанный при регистрации</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+        <div class="modal" id="modal-success">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-small">
+        <div class="modal-content bgc-yellow">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="ta-c"><img class="img-fluid" src="img/static/check_round.png"/>
+              <div class="ff-2 fw-700 fz-sm-32 fz-26 mt-20 mb-10">Поздравляем Вас!</div>
+              <div class="fz-sm-18 fz-16 mx-a mb-30" style="max-width: 300px" id="regAnswer"></div>
+              <button class="btn btn-bg-red fw-700 ff-2 fz-28 tt-u px-60 py-sm-18" data-dismiss="modal" aria-label="Close">Хорошо!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  	
+    
+
+ 
+    
+	<!--jQueryUI-->
+    <script src="assets/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!--Loader-->
+    <script src="assets/plugins/loader/loader.js"></script>
+    <!--jQueryForm-->
+    <script src="assets/plugins/form/jquery.form.min.js"></script>
+    <!--bootbox-->
+    <script src="assets/plugins/bootbox/bootbox.min.js"></script>
+	<!--input-mask-->
+	<script src="assets/plugins/input-mask/inputmask.js"></script>
+	<script src="assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <!--fancybox-->
+    <script src="assets/plugins/fancybox-master/jquery.fancybox.min.js"></script>
+    
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/datatables/datatables.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    
+    <!--init.js-->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+  </body>
+</html>
