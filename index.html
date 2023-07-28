@@ -1,175 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#FAE83C">
+    <meta name="msapplication-navbutton-color" content="#FAE83C">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAE83C">
+    
+    <title>Главная</title>
+    <meta content='' name='keywords'>
+    <meta content='' name='description'>		
+
+	<script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>    
+    
+	<!--jQueryUI-->
+    <link href="assets/plugins/jQueryUI/jquery-ui.min.css" rel="stylesheet">
+    <!--Loader-->
+    <link href="assets/plugins/loader/loader.css" rel="stylesheet">
+    <!--fancybox-->
+    <link href="assets/plugins/fancybox-master/jquery.fancybox.min.css" rel="stylesheet">
+    
+    <link type="image/x-icon" href="img/favicon.png" rel="shortcut icon">
+    <link type="text/css" href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/swiper/swiper.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datepicker-bootstrap/datepicker.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/datatables/datatables.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
+    <link type="text/css" href="libs/croppie/croppie.css" rel="stylesheet">
+    <link type="text/css" href="css/main.min.css" rel="stylesheet">
+    
+    <!--init.js-->
+    <link href="assets/css/my_style.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+  	    <header class="header pos-r z-1">
+      <div class="container header-container">
+        <div class="row jc-sb ai-c header-row gx-10">
+          <div class="col header-menu collapse">
+            <div class="row gx-10 jc-sb pt-sm-100 pt-75 pt-xl-0">
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="/">Главная</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="rules">Правила</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="winners">Победители</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15"><a class="header-menu__link link-brown" href="upload/products.pdf" target="_blank">Продукция</a></div>
+              <div class="col-xl-auto mb-xl-0 mb-15">
+                <div class="pr-xl-15"><a class="header-menu__link link-brown" href="faq">FAQ</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="col d-xl-n">
+            <button class="hamburger collapsed js-hamburger" type="button" data-toggle="collapse" data-target=".header-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+          </div>
+          <div class="col-auto">
+            <div class="row ai-c gx-10">
+              <div class="col-auto"><a class="logo-ryaba" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-ryaba__img" src="img/logo_ryaba.svg" alt="Ряба крымская" width="62"></a></div>
+              <div class="col-auto"><a class="logo-friends" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-friends__img" src="img/logo_friends.svg" alt="Дружба народов" width="82"></a></div>
+              <div class="col-auto"><a class="logo-madina" href="https://druzhbanarodov.ru/" target="_blank"><img class="logo-madina__img" src="img/logo_madina.svg" alt="El Madina" width="108"></a></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row ai-c jc-fe">
+              <div class="col d-xl-b d-n">
+                <div class="row ai-c jc-c">
+                  <div class="col-auto"><a class="header-link" href="https://vk.com/druzhbanarodov_ru" target="_blank"><img class="header-link__icon" src="img/icons/vk.svg"/></a></div>
+                  <div class="col-auto"><a class="header-link" href="#" target="_blank"><img class="header-link__icon header-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                  <div class="col-auto"><a class="header-link" href="https://www.instagram.com/druzhbanarodov_ru/" target="_blank"><img class="header-link__icon" src="img/icons/instagram.svg"/></a></div>
+                </div>
+              </div>
+              <div class="col-auto">
+                
+                                
+                <button class="btn btn-white lh-100 px-lg-32 px-sm-15 px-10" data-toggle="modal" data-target="#modal-enter"><img class="btn__icon mr-lg-10" src="img/icons/user.svg"/><span class="va-m d-lg-ib d-n">Личный кабинет</span></button>
+                                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
 
+	    <div class="wrapper o-h">
+      <div class="front pt-lg-62 pt-md-50 pt-sm-40 pt-25">
+        <div class="front-title c-red tt-u ff-2 fw-700 ta-c lh-100">СЧАСТЛИВЫЙ чек</div>
+        <div class="ta-c pos-r pt-lg-48 pt-15 mb-xxl-150 mb-lg-100 mb-md-60 mb-40"><img class="front-mobile d-b" src="img/static/front-mobile.png"/>
+          
+          	                
+          	<a class="btn btn-bg-red front-btn tt-u ff-2 fw-700 z-1 pos-r" href="#modal-enter" data-toggle="modal">Хочу участвовать!</a>
+          	          
+        </div>
+        <div class="c-red tt-u ff-2 fw-700 ta-c lh-100 fz-xxl-74 fz-xl-64 fz-lg-60 fz-md-50 fz-sm-44 fz-36">Участвуй и выигрывай:</div>
+        <div class="container">
+          <div class="row gx-0 mb-15">
+            <div class="col-lg mb-15 ta-c"><img class="img-fluid trip-img" src="img/static/trip_piter.png"/>
+            </div>
+            <div class="col-lg mb-15 ta-c"><img class="img-fluid trip-img" src="img/static/trip_kazan.png"/>
+            </div>
+            <div class="col-lg mb-15 ta-c"><img class="img-fluid trip-img" src="img/static/trip_moscow.png"/>
+            </div>
+          </div>
+          <div class="c-red ff-2 fw-700 lh-130 fz-lg-32 fz-sm-26 fz-24 pt-22 mb-xxl-80 mb-xl-70 mb-lg-60 mb-md-50 mb-35">
+            <div class="row jc-c gx-20">
+              <div class="col-auto">Путешествия</div>
+              <div class="col-auto">·</div>
+              <div class="col-auto">Айфон 11</div>
+              <div class="col-12 d-sm-n"></div>
+              <div class="col-auto d-sm-b d-n">·</div>
+              <div class="col-auto">Отдых в спа-отеле</div>
+              <div class="col-12"></div>
+              <div class="col-auto">Мультипекарь</div>
+              <div class="col-auto">·</div>
+              <div class="col-auto">Фитнес-браслет</div>
+              <div class="col-12 d-sm-n"></div>
+              <div class="col-auto d-sm-b d-n">·</div>
+              <div class="col-auto">Аксессуары для смартфона</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+  
+  	    <footer>
+      <div class="footer py-xl-83 py-sm-60 py-40">
+        <div class="container footer-container">
+          <div class="row ai-c mb-6">
+            <div class="col-md-auto mb-15 ta-c lh-100 order-md-1"><a class="link-brown-red ff-2 fz-md-44 fz-40" href="tel:88005056568">8 800 505 65 68</a></div>
+            <div class="col-md mb-15 order-md-0">
+              <div class="row gx-10 jc-c">
+                <div class="col-auto"><a class="footer-link" href="https://vk.com/druzhbanarodov_ru" target="_blank"><img class="footer-link__icon footer-link__icon_vk" src="img/icons/vk.svg"/></a></div>
+                <div class="col-auto"><!--a class="footer-link" href="#"><img class="footer-link__icon footer-link__icon_fb" src="img/icons/facebook.svg"/></a--></div>
+                <div class="col-auto"><!--a class="footer-link" href="https://www.instagram.com/druzhbanarodov_ru/" target="_blank"><img class="footer-link__icon footer-link__icon_inst" src="img/icons/instagram.svg"/></a--></div>
+              </div>
+            </div>
+            <div class="col-md ta-c mb-15 order-md-2"><a class="ff-2 fz-20 link-brown-red" href="upload/rules.pdf" target="_blank">Правила акции</a></div>
+          </div>
+          <div class="footer-text c-brown-light ta-c pt-md-30 fz-sm-14 fz-13">Сроки проведения акции: с&nbsp;07&nbsp;октября&nbsp;2020&nbsp;года по&nbsp;31&nbsp;января&nbsp;2021&nbsp;года. Период регистрации чеков: с&nbsp;07&nbsp;октября&nbsp;2020&nbsp;года по&nbsp;21&nbsp;декабря&nbsp;2020&nbsp;года. Розыгрыш Главного приза 25&nbsp;декабря&nbsp;2020&nbsp;года. Срок вручения Главного приза до&nbsp;31&nbsp;января&nbsp;2021&nbsp;года. Полные правила проведения акции, информацию об организаторе акции, о количестве призов, сроках, месте и порядке их получения можно узнать на сайте <a href="https://www.druzhba-promo.ru/" target="_blank" class="link-brown">DRUZHBA-PROMO</a>.RU. Количество призов ограничено, их внешний вид может отличаться от изображенного на рекламных материалах. Организатор акции - АО&nbsp;«Оригинал».</div>
+        </div>
+      </div>
+    </footer>
 
-	
+      
+        <script src="//ulogin.ru/js/ulogin.js"></script>			
+    <script src="/assets/js/social.js"></script>		
+        <div class="modal" id="modal-reg">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-medium">
+        <div class="modal-content">
+          <div class="modal-body px-sm-70 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            
+            
+<form id="formReg" action="/api/user/registration" class="ajax validate" method="post">
+	<input type="hidden" name="token" value="" />
+    <input type="hidden" name="country" value="1" />
+    <input type="hidden" name="region" />
+    <input type="hidden" name="area" />
+    <input type="hidden" name="settlement" />
+    <input type="hidden" name="addr" />                  
+            
+            <div class="row">
+              <div class="col-md-6">
+                <div class="modal-title fz-sm-50 fz-36 fz- ff-2 fw-700 mb-10 tt-u lh-120 ta-c ta-md-l">Регистрация</div>
+              </div>              
+              <div class="col-md-6">
+                <div class="modal-body-panel bgc-yellow pl-15 mb-20">
+                  <div class="row ai-c gx-0" id="uLogin" data-ulogin="display=buttons;fields=first_name,last_name;optional=sex,email;providers=facebook,instagram,vkontakte;hidden=;redirect_uri=;callback=ulogin_func;">
+                    <div class="col">
+                      <div class="fz-sm-16 fz-14">Через соцсети:</div>
+                    </div>
+                    <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="vkontakte"><img class="modal-link__icon" src="img/icons/vk.svg"/></a></div>
+                    <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="facebook"><img class="modal-link__icon modal-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                    <div class="col-auto"><a class="modal-link" href="#" data-uloginbutton="instagram"><img class="modal-link__icon" src="img/icons/instagram.svg"/></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="fam">
+                    <label class="form-label">Фамилия</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="im">
+                    <label class="form-label">Имя</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+                <div class="mb-20">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="ot">
+                    <label class="form-label">Отчество</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-22">
+                  <div class="row sex-row ai-c jc-c">
+                    <div class="col-auto">
+                      <div class="c-gray fz-18">Пол:</div>
+                    </div>
+                    <div class="col-auto">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="radio" name="sex" value="t">
+                        <div class="checkbox__text">Муж.</div>
+                      </label>
+                    </div>
+                    <div class="col-auto">
+                      <label class="checkbox">
+                        <input class="checkbox__input" type="radio" name="sex" value="f">
+                        <div class="checkbox__text">Жен.</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-22">
+                  <div class="form-group pos-r">
+                    <input class="form-control mask-phone js-input validate" type="tel" name="phone">
+                    <label class="form-label">Номер телефона</label>
+                    <div class="invalid-feedback">Номер телефона введен неверно</div>
+                  </div>
+                </div>
+                <div class="mb-20">
+                  <div class="form-group pos-r">
+                    <input class="form-control js-input validate" type="text" name="email">
+                    <label class="form-label">E-mail</label>
+                    <div class="invalid-feedback">Обязательно к заполнению</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-17">
+              <div class="form-group pos-r">
+                <input class="form-control js-input" type="text" name="city">
+                <label class="form-label">Город</label>
+                <div class="invalid-feedback">Обязательно к заполнению</div>
+              </div>
+            </div>
+            <div class="mb-7">
+              <label class="checkbox">
+                <input class="checkbox__input" type="radio" name="confirm1" >
+                <div class="checkbox__text">Согласие с <a href="upload/rules.pdf" class="link-red" target="_blank">Правилами Акции</a></div>
+              </label>
+            </div>
+            <div class="mb-27">
+              <label class="checkbox">
+                <input class="checkbox__input" type="radio" name="confirm2" >
+                <div class="checkbox__text">Подтверждение о достижении 18-летнего возраста;</div>
+              </label>
+            </div>
+            <div class="ta-c">
+              <button type="submit" class="btn btn-bg-red fw-700 fz-sm-28 fz-24 ff-2 tt-u py-sm-18 py-15 px-sm-90">Зарегистрироваться</button>
+            </div>
+            
+</form>            
+            
+          </div>
+        </div>
+      </div>
+    </div>
 
+        <div class="modal" id="modal-enter">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="modal-title ta-c fz-sm-50 fz-36 fz- ff-2 fw-700 mb-10 tt-u lh-120">Авторизация</div>
+            
+<form method="post" action="/api/user/auth" id="formAuth" class="ajax validate">                            
+  
+            <div class="modal-body-panel bgc-yellow pl-xl-25 pl-15 mb-20">
+              <div class="row ai-c gx-0" id="uLogin2" data-ulogin="display=buttons;fields=first_name,last_name;optional=sex,email;providers=facebook,instagram,vkontakte;hidden=;redirect_uri=;callback=ulogin_func;">
+                <div class="col">
+                  <div class="fz-sm-16 fz-14">Через соцсети:</div>
+                </div>                
+                <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="vkontakte"><img class="modal-link__icon" src="img/icons/vk.svg"/></a></div>
+                <div class="col-auto"><a class="modal-link modal-link_border" href="#" data-uloginbutton="facebook"><img class="modal-link__icon modal-link__icon_fb" src="img/icons/facebook.svg"/></a></div>
+                <div class="col-auto"><a class="modal-link" href="#" data-uloginbutton="instagram"><img class="modal-link__icon" src="img/icons/instagram.svg"/></a></div>
+                
+              </div>
+            </div>
+            <div class="mb-15">
+              <div class="form-group pos-r">
+                <input class="form-control mask-phone js-input validate" type="tel" name="login">
+                <label class="form-label">Номер телефона</label>
+                <div class="invalid-feedback">Номер телефона введен неверно</div>
+              </div>
+            </div>
+            <div class="mb-sm-30 mb-25">
+              <div class="form-group pos-r">
+                <input class="form-control js-input validate" type="password" name="passwd">
+                <label class="form-label">Пароль</label><a class="js-modal form-group-link link-brown" href="#modal-recovery">Забыли пароль?</a>
+                <div class="invalid-feedback">Пароль введен неверно</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-bg-red w-100p fw-700 fz-sm-28 fz-24 ff-2 tt-u py-sm-18 py-15">Авторизоваться</button>
+</form>
+            
+            <div class="ta-c pt-25"><a class="link-black js-modal fz-sm-20 fz-18" href="#modal-reg">Зарегистрироваться</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+        <div class="modal" id="modal-recovery">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-small">
+        <div class="modal-content">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="ta-c ff-2 fw-700 fz-sm-32 fz-26 mb-15">Восстановление пароля</div>
+            
+<form id="formRestore" class="ajax validate" method="post" action="/api/user/restorePassword">                           
+            <div class="mb-sm-30 mb-25">
+              <div class="form-group pos-r">
+                <input class="form-control mask-phone js-input validate" type="text" name="login">
+                <label class="form-label">Телефон</label>
+                <div class="invalid-feedback">Телефон введен неверно</div>
+              </div>
+            </div>
+            <button type="submit" class="w-100p btn btn-bg-red fw-700 ff-2 fz-28 tt-u px-60 py-sm-18">Восстановить</button>
+</form>
+            <div class="mt-sm-20 mt-15 fz-14 c-gray lh-120">Пароль будет выслан по СМС на телефон, указанный при регистрации</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+        <div class="modal" id="modal-success">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-small">
+        <div class="modal-content bgc-yellow">
+          <div class="modal-body px-sm-90 py-sm-60 py-30">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            <div class="ta-c"><img class="img-fluid" src="img/static/check_round.png"/>
+              <div class="ff-2 fw-700 fz-sm-32 fz-26 mt-20 mb-10">Поздравляем Вас!</div>
+              <div class="fz-sm-18 fz-16 mx-a mb-30" style="max-width: 300px" id="regAnswer"></div>
+              <button class="btn btn-bg-red fw-700 ff-2 fz-28 tt-u px-60 py-sm-18" data-dismiss="modal" aria-label="Close">Хорошо!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+  	
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-	
-	
-	
-	
-
-
-
-
-
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd"> 
-<html> 
-<head> 
-<title>Срок регистрации домена закончился</title> 
-<!--meta name="robots" content="noindex,nofollow"--> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css"> 
-<!--
-body {font-size:100.1%}
-html, body, div, span,
-iframe, img, table {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	line-height: 1;
-	vertical-align: baseline;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-}
-a, a img {text-decoration:none; color:#005C96; border: 0}
-a:hover {text-decoration:underline}
-table {border-collapse: collapse; border-spacing: 0}
-h1, h2, h3 {font-weight:normal}
  
-#all {width:100%}
-.m {width:120px}
- 
-#header .m, #header #domain, #header .logo {border-bottom:2px solid #0B76B2; vertical-align:top; padding:0 0 1em}
-#header h1 {font-size:200%; color:#005C96; margin:20px 0 0 0;}
-#header .logo {padding-right:80px}
-.logo_wrapper {padding:0px 0px 10px 80px}
-.logo_wrapper a div {background:url(http://storage.nic.ru/ru/images/svg/1.ru-center-logo.svg); width:140px; height: 45px;}
- 
-.l {margin:2em 0 0 0}
-.l td {vertical-align:top}
-.l h2 {text-align:right; margin:5px 5px 0 0; font-size:70%; color:#939495}
- 
-#domain div {font-size:70%; margin-top:7px}
-#udn {text-transform: uppercase;}
- 
-.right, .left {font-size:75%; padding:4em 1em 5em 0; vertical-align:top}
-.right {width:30%}
-.left h1 {font-size:160%; color:#3E4853; margin:0 0 1em 0}
-.left p {margin:1.5em 0; line-height:1.4em}
-.left a {padding-left:12px; background: url(/images/rn_darr.gif) no-repeat left 6px}
-.left span.domain_big {text-transform:uppercase; white-space:nowrap}
- 
-.rblock {border:1px solid #CFCFCF; width:15.7em; padding:0 0 1.5em 0; margin:0}
-.rblock h3 {color:#FFFFFF; font-weight:bold; font-size:90%; background:#CFCFCF; padding:2px 0 4px 4px; margin:0 0 1em 0}
-.rblock ul.right_menu {list-style-type:none; margin:0; padding:0 0 0 1em; font-size:85%}
-.rblock ul.right_menu li {margin:0;}
-.rblock ul.right_menu a {display:block;}
-.rblock ul.right_menu a.new_domain {background:url(/images/rn_reg.jpg) 11px center no-repeat; padding:10px 0 10px 55px}
-.rblock ul.right_menu a.free_domain {background:url(/images/rn_wings1.gif) left center no-repeat; padding:10px 0 10px 55px;}
-.rblock ul.right_menu a.domain_store {background:url(/images/rn_p_auction.gif) 11px center no-repeat; padding:10px 0 10px 55px}
-.rblock ul.right_menu a.support_serv {background:url(/images/rn_esc_serv.gif) 11px center no-repeat; padding:10px 0 10px 55px}
-.rblock ul.right_menu a.parking {background:url(/images/rn_parking_1.jpg) 9px center no-repeat; padding:10px 0 10px 55px}
- 
-.i {margin-top:2em}
-.nobr {white-space:nowrap}
- 
-.footer {border-top:2px solid #0B76B2; text-align:center}
-.footer p {margin:1em auto; font-size:70%}
-
-.left a.l1 {background: none; padding-left: 0px;}
- 
---> 
-</style> 
-</head> 
- 
-<body onload="ri()">
-<script type="text/javascript">
-document.cookie = "expid=0; expires=Fri, 1-Jan-1980 01:01:01 GMT; path=/";
-function ri() {
-document.cookie = "expid=AAAAAmM/aWyJmT2MA0tZAg==; path=/";
-document.im.src="/020000006C693F638C3D998902594B03/images/rn_logo.gif";
-}
-</script>
- 
- 
-<table id="all"> 
-<tr id="header"> 
-	<td class="m"></td> 
-	<td id="domain"> 
-		<div>&nbsp;Русский&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/en/index.html">English</a></div> 
-		<h1><span id="udn">DRUZHBA-PROMO.RU</span></h1> 
-	</td> 
-	<td class="logo" align="right"> 
-		<table class="l"> 
-			<tr>
-				<td class="logo_wrapper">
-					<a href="http://nic.ru">
-						<div></div>
-					</a>
-				</td>
-			</tr> 
-		</table> 
-	</td> 
-</tr> 
-<tr class="main"> 
-	<td class="m">&nbsp;</td> 
-	<td class="left"> 
-		<h1>Срок регистрации домена <span class="domain_big">DRUZHBA-PROMO.RU</span> закончился</h1> 
-		<p>Услуга по регистрации доменного имени <span class="domain_big">DRUZHBA-PROMO.RU</span> временно не предоставляется.</p> 
-		<p>По вопросам продления обратитесь к партнеру RU-CENTER</p> 
-		<p>Если вы хотите приобрести этот домен — закажите услугу &laquo;Доменный брокер&raquo;. Мы проведем переговоры с текущим владельцем имени и организуем безопасную сделку.</p>
-		<p>
-			<a href="https://www.nic.ru/info/domain-broker/?ipartner=1144&adv_id=br&code=qbznva_oebxre&domain=DRUZHBA-PROMO.RU">
-				Заказать услугу &laquo;Доменный брокер&raquo;
-			</a>
-		</p>
-		<p>Если администратор домена не продлит регистрацию, домен освободится.</p> 
-		
-        <p>
-           
-          <a href="https://www.nic.ru/whois/?ipartner=1144&adv_id=7&domain=DRUZHBA-PROMO.RU">Whois DRUZHBA-PROMO.RU</a> 
-        </p> 
-	</td> 
-	<td class="right"> 
-		<div class="rblock"> 
-			<h3>Домены</h3> 
-			<ul class="right_menu"><li><a href="https://www.nic.ru/catalog/domains/?ipartner=1144&adv_id=1" class="new_domain">Регистрация<br>доменов</a><li><a href="http://auction.nic.ru/freeing/list.cgi?ipartner=1144&adv_id=2" class="free_domain">Освобождающиеся<br>домены</a><li><a href="https://www.nic.ru/shop/?ipartner=1144&adv_id=3" class="domain_store">Магазин&nbsp;доменов</a><li><a href="https://www.nic.ru/support/create_ticket" class="support_serv">Служба<br>поддержки</a></ul> 
-		</div> 
-	</td> 
-</tr> 
- 
-
-
-</table> 
- 
-<div class="footer"><p>&copy; Региональный Сетевой Информационный Центр, 2001&mdash;2022</p></div> 
- 
-</body> 
-</html> 
-
-
-
-
-
-
+    
+	<!--jQueryUI-->
+    <script src="assets/plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!--Loader-->
+    <script src="assets/plugins/loader/loader.js"></script>
+    <!--jQueryForm-->
+    <script src="assets/plugins/form/jquery.form.min.js"></script>
+    <!--bootbox-->
+    <script src="assets/plugins/bootbox/bootbox.min.js"></script>
+	<!--input-mask-->
+	<script src="assets/plugins/input-mask/inputmask.js"></script>
+	<script src="assets/plugins/input-mask/jquery.inputmask.js"></script>
+    <!--fancybox-->
+    <script src="assets/plugins/fancybox-master/jquery.fancybox.min.js"></script>
+    
+    <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="libs/swiper/swiper.min.js"></script>
+    <script src="libs/datatables/datatables.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="libs/bootstrap-fileinput/js/locales/ru.js"></script>
+    <script src="libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.js"></script>
+    <script src="libs/datepicker-bootstrap/js/datepicker.ru-RU.js"></script>
+    <script src="libs/croppie/croppie.min.js"></script>
+    <script src="libs/jquery.maskedinput.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    
+    <!--init.js-->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+  </body>
+</html>
